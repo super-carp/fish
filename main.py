@@ -4,7 +4,7 @@
 让模型压成"第一人称记忆"，写进同一个 Markdown，再把两边上下文一起清空。
 之后每一轮请求都把这份记忆注入 system_prompt，两个会话读的是同一份。
 
-作者：大肥鱼（基于 Dumbledore 的需求设计）
+作者：super-carp
 许可：MIT
 """
 
@@ -104,7 +104,7 @@ def _default_mem_dir() -> Path:
 
 @register(
     "astrbot_plugin_fish_memory_core",
-    "大肥鱼",
+    "super-carp",
     "群聊私聊共用同一份长期记忆：每晚定时压缩原文、写入摘要、双向清空并同步注入",
     "1.0.0",
 )
