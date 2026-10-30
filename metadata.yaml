@@ -3,5 +3,5 @@ display_name: 记忆压缩焕新
 desc: 群聊私聊共用同一份长期记忆：每晚定时压缩原文、写入摘要、双向清空并同步注入
 short_desc: 群私聊共用记忆 + 每晚自动压缩
 version: 1.0.0
-author: 大肥鱼
+author: super-carp
 repo: https://github.com/super-carp/fish
