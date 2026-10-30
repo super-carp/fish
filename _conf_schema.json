@@ -1,0 +1,113 @@
+{
+  "enabled": {
+    "type": "bool",
+    "default": true,
+    "description": "启用记忆焕新"
+  },
+  "schedule": {
+    "type": "string",
+    "default": "23:40",
+    "description": "每天几点触发（24 小时制 HH:MM）"
+  },
+  "owner_qq": {
+    "type": "string",
+    "default": "",
+    "description": "主人 QQ 号（必填，只有他能操作）"
+  },
+  "platform": {
+    "type": "string",
+    "default": "",
+    "description": "平台 ID，留空自动从事件获取"
+  },
+  "targets": {
+    "type": "list",
+    "default": [],
+    "description": "固定绑定的会话 umo 列表，一般用 /记忆绑定"
+  },
+  "mem_dir": {
+    "type": "string",
+    "default": "",
+    "description": "记忆目录，留空用 data/plugin_data/fish_memory"
+  },
+  "mem_file": {
+    "type": "string",
+    "default": "长期记忆.md",
+    "description": "记忆文件名"
+  },
+  "raw_file": {
+    "type": "string",
+    "default": "聊天原文存档.md",
+    "description": "原文存档文件名"
+  },
+  "inject_only_targets": {
+    "type": "bool",
+    "default": true,
+    "description": "只在绑定会话注入记忆",
+    "hint": "关掉会让别人的私聊也读到你的记忆"
+  },
+  "inject_max_chars": {
+    "type": "int",
+    "default": 60000,
+    "description": "每轮最多注入多少字"
+  },
+  "digest_input_chars": {
+    "type": "int",
+    "default": 24000,
+    "description": "喂给压缩模型的原文上限字数"
+  },
+  "clip_per_message": {
+    "type": "int",
+    "default": 800,
+    "description": "单条消息最多保留多少字"
+  },
+  "max_rounds": {
+    "type": "int",
+    "default": 5,
+    "description": "质量不过最多重写几轮"
+  },
+  "review_enabled": {
+    "type": "bool",
+    "default": true,
+    "description": "是否开启质量审核"
+  },
+  "reviewer": {
+    "type": "string",
+    "default": "provider",
+    "description": "审核员：provider 或 local"
+  },
+  "local_base": {
+    "type": "string",
+    "default": "http://127.0.0.1:1234/v1",
+    "description": "本地模型接口地址"
+  },
+  "local_model": {
+    "type": "string",
+    "default": "qwen3-14b",
+    "description": "本地模型名"
+  },
+  "local_timeout": {
+    "type": "int",
+    "default": 1800,
+    "description": "本地模型超时秒数"
+  },
+  "wait_minutes": {
+    "type": "int",
+    "default": 10,
+    "description": "到点后等本地模型的最长分钟数"
+  },
+  "persona_name": {
+    "type": "string",
+    "default": "她",
+    "description": "机器人自称"
+  },
+  "owner_name": {
+    "type": "string",
+    "default": "主人",
+    "description": "主人称呼"
+  },
+  "dry_run": {
+    "type": "bool",
+    "default": false,
+    "description": "演练模式：只压不写不清"
+  }
+}
